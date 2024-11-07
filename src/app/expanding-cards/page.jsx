@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './expanding-cards.module.css';
 
 const panelsData = [
@@ -30,7 +30,7 @@ const panelsData = [
   },
 ];
 
-const ExpandingCardsServer = () => {
+const ExpandingCards = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleClick = (index) => {
@@ -55,4 +55,4 @@ const ExpandingCardsServer = () => {
   );
 };
 
-export default ExpandingCardsServer;
+export default ExpandingCards;
