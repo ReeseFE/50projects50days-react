@@ -1,3 +1,5 @@
+'use client';
+import React, { useState } from 'react';
 import styles from './expanding-cards.module.css';
 
 const panelsData = [
@@ -29,13 +31,22 @@ const panelsData = [
 ];
 
 const ExpandingCardsServer = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleClick = (index) => {
+    setActiveIndex(index);
+  };
+
   return (
-    <div className='container'>
+    <div className={styles.container}>
       {panelsData.map((panel, index) => (
         <div
           key={index}
-          className='panel'
+          className={`${styles.panel} ${
+            activeIndex === index ? styles.panelActive : ''
+          }`}
           style={{ backgroundImage: `url(${panel.imageUrl})` }}
+          onClick={() => handleClick(index)}
         >
           <h3>{panel.title}</h3>
         </div>
