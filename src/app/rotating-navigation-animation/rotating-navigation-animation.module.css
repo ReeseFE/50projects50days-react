@@ -1,0 +1,103 @@
+.background {
+  background-color: #333333;
+  overflow: hidden;
+}
+
+.container {
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  transition: all 0.5s linear;
+}
+
+.containerRotated {
+  rotate: -25deg;
+}
+
+.circleContainer {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  transition: all 0.5s linear;
+  z-index: 1;
+}
+
+.circle {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: #ff7979;
+  border-radius: 50%;
+}
+
+.circleRotated {
+  rotate: -65deg;
+}
+
+.barsIcon,
+.timesIcon {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.barsIcon {
+  position: absolute;
+  right: 25%;
+  bottom: 25%;
+}
+
+.timesIcon {
+  position: absolute;
+  left: 25%;
+  bottom: 25%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  color: white;
+}
+
+.nav div {
+  margin: 40px;
+}
+
+.navItemHidden {
+  transition: all 0.5s linear;
+  transform: translateX(-150px);
+}
+
+.navItemHidden:nth-child(2) {
+  transform: translateX(-200px);
+}
+
+.navItemHidden:nth-child(3) {
+  transform: translateX(-250px);
+}
+
+.navItemVisible {
+  transform: translateX(0);
+  transition: all 0.5s linear 0.3s;
+}
+
+.navItemVisible:nth-child(2) {
+  margin-left: 55px;
+}
+
+.navItemVisible:nth-child(3) {
+  margin-left: 70px;
+}
