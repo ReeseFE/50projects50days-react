@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #efedd6;
+}
+
+.box {
+  background-color: steelblue;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  font-size: 36px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.box:nth-child(even) {
+  transform: translateX(400%);
+}
+
+.box:nth-child(odd) {
+  transform: translateX(-400%);
+}
